@@ -8,10 +8,11 @@ Calculates the area of 5 circles based on inputs from the user.
   Process: Calculate area of a circle.
   Outputs: Show the area of 5 circles.*/
 
-'#include <iostream>
-'#include <iomanip>
-'#include <string>
-'#include <cmath>
+//Remove the backslashes at the beginning of the next four lines before running the code.
+//#include <iostream>
+//#include <iomanip>
+//#include <string>
+//#include <cmath>
 
 using namespace std;
 
