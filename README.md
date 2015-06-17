@@ -1,2 +1,99 @@
 # circ-area-calculator
 Calculates the area of 5 circles based on inputs from the user.
+/*Programmer: Christopher Guzman
+  Program: A program that calculates the area of a 
+  circle based on user inputs and functions.
+  Date: May 8, 2013
+  Inputs: 5 decimal numbers
+  Process: Calculate area of a circle.
+  Outputs: Show the area of 5 circles.*/
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+//function declarations.//
+void getInputs(double &,double &,double &,double &,double &);
+void CalcArea(double &,double &,double &,double &,double &,double &,double &,double &,double &,double &);
+void display(double &,double &,double &,double &,double &,double &,double &,double &,double &,double &);
+
+
+
+int main()
+{
+	//Variable Declarations.//
+	double radius1=0.0;
+	double radius2=0.0;
+	double radius3=0.0;
+	double radius4=0.0;
+	double radius5=0.0;
+	double circArea1=0.0;
+	double circArea2=0.0;
+	double circArea3=0.0;
+	double circArea4=0.0;
+	double circArea5=0.0;
+	
+
+	getInputs(radius1, radius2, radius3, radius4, radius5);//get inputs from user.//
+	
+	CalcArea(radius1, radius2, radius3, radius4, radius5,circArea1,circArea2,circArea3,circArea4,circArea5);//calculate area for each circle.//
+
+	display(radius1, radius2, radius3, radius4, radius5,circArea1,circArea2,circArea3,circArea4,circArea5);//display outputs.//
+	
+	system("pause");
+	return 0;
+}//end of main().//
+
+//getInputs() function.//
+void getInputs(double &radius1,double &radius2,double &radius3,double &radius4,double &radius5)
+{
+  //Get 5 radius inputs from user.//
+	cout<<"\n----------------------Welcome to Circle Area Calculator!!!-------------------"<<endl;
+	cout<<"\n\n Please enter the radius of the first circle (in inches):  ";
+	cin>>radius1;
+	cout<<"\n Please enter the radius of the second circle (in inches): ";
+	cin>>radius2;
+	cout<<"\n Please enter the radius of the third circle (in inches):  ";
+	cin>>radius3;
+	cout<<"\n Please enter the radius of the fourth circle (in inches): ";
+	cin>>radius4;
+	cout<<"\n Please enter the radius of the fifth circle (in inches):  ";
+	cin>>radius5;
+	cout<<"\n------------------------------------------------------------------------------"<<endl;
+	cout<<"\n\n\n\n\n"<<endl;
+	system("pause");
+
+}//end of getInputs().//
+
+
+//CalcArea() function.//
+void CalcArea(double &radius1,double &radius2,double &radius3,double &radius4,double &radius5,double &circArea1,double &circArea2,double &circArea3,double &circArea4,double &circArea5)
+{
+  //Calculate the area of each circle.//
+	double pi=3.14;
+	circArea1=(pow(radius1, 2))*pi;
+	circArea2=(pow(radius2, 2))*pi;
+	circArea3=(pow(radius3, 2))*pi;
+	circArea4=(pow(radius4, 2))*pi;
+	circArea5=(pow(radius5, 2))*pi;
+}//end of CalcArea().//
+
+
+//display() function.//
+void display(double &radius1,double &radius2,double &radius3,double &radius4,double &radius5,double &circArea1,double &circArea2,double &circArea3,double &circArea4,double &circArea5)
+{
+  //Display outputs.//
+	cout<<fixed<<showpoint<<setprecision(2)<<endl;
+	cout<<"\n\n\n\n\n\n\n\n";
+	cout<<"-------------------------RESULTS------------------------------\n\n"<<endl;
+	cout<<"Circle 1 Radius: "<<radius1<<" in."<<setw(20)<<"Area 1 = "<<circArea1<<" sq. inches.\n"<<endl;
+	cout<<"Circle 2 Radius: "<<radius2<<" in."<<setw(20)<<"Area 2 = "<<circArea2<<" sq. inches.\n"<<endl;
+	cout<<"Circle 3 Radius: "<<radius3<<" in."<<setw(20)<<"Area 3 = "<<circArea3<<" sq. inches.\n"<<endl;
+	cout<<"Circle 4 Radius: "<<radius4<<" in."<<setw(20)<<"Area 4 = "<<circArea4<<" sq. inches.\n"<<endl;
+	cout<<"Circle 5 Radius: "<<radius5<<" in."<<setw(20)<<"Area 5 = "<<circArea5<<" sq. inches.\n"<<endl;
+	cout<<"--------------------------------------------------------------\n\n\n\n\n\n\n\n"<<endl;
+
+}//end of display().//
